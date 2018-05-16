@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                         Double cantidadAux = 0.0;
                         String dolaresComprarAux = dolaresComprar.getText().toString();
                         if(dolaresComprarAux!=null & dolaresComprarAux.length()>0){
-                            cantidadAux = Double.parseDouble(dolaresComprarAux) * cotizacionDefecto;
+                            cantidadAux = Double.parseDouble(dolaresComprarAux.substring(1)) * cotizacionDefecto;
                         }
                         pesosComprar.setText("$"+nf.format(cantidadAux));
                     }
